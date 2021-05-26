@@ -1,0 +1,54 @@
+# authentication
+# post method to register/login
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+{
+    "username":"hangvu",
+    "password":"hangvu"
+}
+
+###
+POST  http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "username":"dang4",
+    "password":"dang"
+}
+###
+#post
+# post method to get post
+
+POST  http://localhost:5000/api/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MGE0ZWM0MzcwNmVlMDJlOGNlZjM3NmIiLCJpYXQiOjE2MjE0ODcyNjJ9.V81Xzi0CHxEbWNyDG49YWp8OtPpkzYkusDpG6v8jAp0
+
+{
+    "title":"Quet nha lan 8 ne",
+    "description":"quet nha rua bat cam com dun nuoc",
+    "url":"https://www.youtube.com/watch?v=rgFd17fyM4A&t=2778s",
+    "status":"Learning"
+}
+
+###
+GET http://localhost:5000/api/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MGE0ZWM0MzcwNmVlMDJlOGNlZjM3NmIiLCJpYXQiOjE2MjE0ODYxNDB9.28Dj4mq_ZjuAP5jEPRH2MEkY-XN7q_KOzb6FHq0by00
+
+###
+PUT  http://localhost:5000/api/posts/60a5d920da92af20542b4000
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MGE0ZWM0MzcwNmVlMDJlOGNlZjM3NmIiLCJpYXQiOjE2MjE0ODYxNDB9.28Dj4mq_ZjuAP5jEPRH2MEkY-XN7q_KOzb6FHq0by00
+Content-Type: application/json
+
+{
+    "description":"Learn reactjs",
+    "url":"https://www.youtube.com/watch?v=rgFd17fyM4A&t=2778s",
+    "status":"Learned"
+}
+
+###
+DELETE  http://localhost:5000/api/posts/60a5e24149bfc42e60d3d8e0
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MGE0ZWM0MzcwNmVlMDJlOGNlZjM3NmIiLCJpYXQiOjE2MjE0ODYxNDB9.28Dj4mq_ZjuAP5jEPRH2MEkY-XN7q_KOzb6FHq0by00
+
+###
+GET  http://localhost:5000/api/posts/60a5d920da92af20542b4000
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MGE0ZWM0MzcwNmVlMDJlOGNlZjM3NmIiLCJpYXQiOjE2MjE0ODYxNDB9.28Dj4mq_ZjuAP5jEPRH2MEkY-XN7q_KOzb6FHq0by00
